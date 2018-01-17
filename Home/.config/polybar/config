@@ -1,11 +1,11 @@
-;=========================================================;
-;                Caligula's polybar config.               ;
-;=========================================================;
+;========================================================;
+;                  Sam's polybar config.                 ;
+;========================================================;
 ; To refresh while editing do: $ polybar -r rome
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;			C O L O R S
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [colors]
 peach = #FFCD98
@@ -35,9 +35,9 @@ background = ${xrdb:background}
 foreground = ${xrdb:foreground}
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;			G L O B A L
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [global/wm]
 margin-top = 21
@@ -76,9 +76,9 @@ module-margin-left = 0
 module-margin-right = 0
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;			F O N T S
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 font-0 = PowerlineSymbols:size=15;3
 font-1 = Terminus:size=10;3
@@ -89,9 +89,9 @@ font-5 = FontAwesome:size=26;7
 ; Extra symbols: http://fontawesome.io/cheatsheet/
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;			  T R A Y
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 tray-position = left
 tray-padding = 0
@@ -105,9 +105,9 @@ tray-background = ${colors.xcolor1}
 ;override-redirect = true
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;  	    M O D U L E    L A Y O U T S
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 modules-left = i3 RightArrow3 weather RightArrow2 RightArrow1
 modules-center = date
@@ -126,9 +126,9 @@ modules-right = arrow1 LeftStripe arrow1 volume arrow2 network ssh vpn arrow3 cp
 ;modules-right  =arrow1 arrow2 weather arrow3 network arrow2 powermenu
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;		      i 3   M O D U L E
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/i3]
 type = internal/i3
@@ -214,9 +214,9 @@ label-urgent-background = #bd2c40
 label-urgent-padding = 2
 label-urgent-font = 3
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;	          T E X T    M O D U L E S
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/pipe]
 type = custom/text
@@ -286,9 +286,9 @@ content-foreground = ${colors.xcolor0}
 content-background = ${colors.xcolor1}
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;		       X W I N D O W
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/xwindow]
 type = internal/xwindow
@@ -299,9 +299,9 @@ format-background = ${colors.xcolor0}
 label = "» %title:0:22:...%"
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;		    X K E Y B O A R D
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -316,9 +316,9 @@ label-indicator-padding = 1
 label-indicator-background = ${colors.salmon}
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;		   F I L E S Y S T E M
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/filesystem]
 type = internal/fs
@@ -342,9 +342,9 @@ label-unmounted-foreground = ${colors.xcolor7}
 label-unmounted-background = ${colors.xcolor1}
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;			    M P D
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/mpd]
 type = internal/mpd
@@ -371,9 +371,9 @@ toggle-on-foreground = ${colors.primary}
 toggle-off-foreground = #66
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;		     B A C K L I G H T
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/backlight]
 type = internal/xbacklight
@@ -391,9 +391,9 @@ ramp-3 = 🌒
 ramp-4 = 🌑
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;			   C P U
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/cpu]
 type = internal/cpu
@@ -418,9 +418,9 @@ ramp-coreload-6 = ▇
 ;ramp-coreload-7 = █
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;			M E M O R Y
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/memory]
 type = internal/memory
@@ -435,9 +435,9 @@ format-margin-top = -5
 label = %percentage_used%%
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;	      W I R E L E S S    N E T W O R K
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/network]
 type = internal/network
@@ -466,9 +466,9 @@ ramp-signal-6 = ▇
 ramp-signal-7 = █
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;   		      E T H E R N E T
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/eth]
 type = internal/network
@@ -484,9 +484,9 @@ label-disconnected-foreground = ${colors.xcolor4}
 label-disconnected-background = ${colors.xcolor7}
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;		     D A T E  &  T I M E
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/date]
 type = internal/date
@@ -506,9 +506,9 @@ time-alt = "  %I:%M:%S %p"
 label = "  %date%%time%  "
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;			V O L U M E
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/volume]
 type = internal/volume
@@ -556,9 +556,9 @@ bar-volume-fill = ─
 bar-volume-empty = ─
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;			 B A T T E R Y
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/battery]
 type = internal/battery
@@ -597,9 +597,9 @@ animation-charging-4 = " "
 animation-charging-framerate = 750
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;		    T E M P E R A T U R E
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/temperature]
 type = internal/temperature
@@ -625,9 +625,9 @@ ramp-3 = 
 ramp-4 = 
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;		       G I T H U B
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/github]
 type = internal/github
@@ -648,9 +648,9 @@ empty-notifications = false
 label =  %notifications%
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;		      P O W E R   M E N U
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/powermenu]
 type = custom/menu
@@ -763,9 +763,9 @@ menu-0-5-foreground = ${colors.xcolor1}
 menu-0-5-background = ${colors.xcolor0}
 
 
-;----------------------------------------------------------
+;---------------------------------------------------------
 ;		       R U N    M E N U
-;----------------------------------------------------------
+;---------------------------------------------------------
 
 [module/appmenu]
 type = custom/menu
@@ -819,73 +819,6 @@ menu-0-6-font = 6
 menu-0-6-foreground = ${colors.xcolor1}
 menu-0-6-background = ${colors.xcolor0}
 
-
-;----------------------------------------------------------
-;		      S C R I P T    M O D U L E S
-;    https://github.com/jaagr/polybar/wiki/Module:-script
-;----------------------------------------------------------
-
-; Example json files for mail, weather, & music: https://github.com/Chaosteil/dotfiles/tree/master/polybar/.config/polybar
-[module/mail]
-type = custom/script
-exec = $HOME/.config/polybar/mail.py
-interval = 120
-label = "  %output:0:5:...% "
-;  
-format-foreground = ${colors.xcolor7}
-format-background = ${colors.xcolor1}
-
-
-[module/weather]
-type = custom/script
-exec = $HOME/.config/polybar/weather.py
-interval = 120
-label = "  %output:0:22:...% "
-format-foreground = ${colors.xcolor1}
-format-background = ${colors.xcolor7}
-
-
-[module/music]
-type = custom/script
-exec = $HOME/.config/polybar/mediaplayer.py
-exec-if = pgrep -x spotify
-interval = 3
-label = "  %output:0:30:% "
-format-foreground = ${colors.xcolor7}
-format-background = ${colors.xcolor1}
-click-left = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
-
-
-[module/ssh]
-type = custom/script
-exec = echo + SSH
-exec-if = pgrep -i ssh
-interval = 3.0
-format-foreground = ${colors.xcolor4}
-format-background = ${colors.xcolor7}
-label = " %output:0:5%"
-click-left = echo left %counter%
-click-middle = echo middle %counter%
-click-right = echo right %counter%
-scroll-up = echo scroll up %counter%
-scroll-down = echo scroll down %counter%
-
-
-[module/vpn]
-type = custom/script
-exec = echo + VPN
-exec-if = pgrep -i vpn
-interval = 3.0
-format-foreground = ${colors.xcolor4}
-format-background = ${colors.xcolor7}
-label = " %output:0:5%"
-click-left = echo left %counter%
-click-middle = echo middle %counter%
-click-right = echo right %counter%
-scroll-up = echo scroll up %counter%
-scroll-down = echo scroll down %counter%
-
-
-;#########################################################;
-;                 E N D    O F    F I L E                 :
-;#########################################################;
+;########################################################;
+;                 E N D    O F    F I L E                :
+;########################################################;
