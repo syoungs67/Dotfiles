@@ -1,36 +1,30 @@
 ;========================================================;
 ;                  Sam's polybar config.                 ;
 ;========================================================;
-; To refresh while editing do: $ polybar -r rome
+; To refresh while editing do: $ polybar -r bar
 
 ;---------------------------------------------------------
 ;			C O L O R S
 ;---------------------------------------------------------
 
 [colors]
-peach = #FFCD98
-lime = #CADC79
-salmon = #d97464
-darkgrey = #2e2e2e
-lightgrey = #444444
-alert = #bd2c40
 
-xcolor0 = ${xrdb:color0}
-xcolor1 = ${xrdb:color1}
-xcolor2 = ${xrdb:color2}
-xcolor3 = ${xrdb:color3}
-xcolor4 = ${xrdb:color4}
-xcolor5 = ${xrdb:color5}
-xcolor6 = ${xrdb:color6}
-xcolor7 = ${xrdb:color7}
-xcolor8 = ${xrdb:color8}
-xcolor9 = ${xrdb:color9}
-xcolor10 = ${xrdb:color10}
-xcolor11 = ${xrdb:color11}
-xcolor12 = ${xrdb:color12}
-xcolor13 = ${xrdb:color13}
-xcolor14 = ${xrdb:color14}
-xcolor15 = ${xrdb:color15}
+xcolor0   = ${xrdb:color0}
+xcolor1   = ${xrdb:color1}
+xcolor2   = ${xrdb:color2}
+xcolor3   = ${xrdb:color3}
+xcolor4   = ${xrdb:color4}
+xcolor5   = ${xrdb:color5}
+xcolor6   = ${xrdb:color6}
+xcolor7   = ${xrdb:color7}
+xcolor8   = ${xrdb:color8}
+xcolor9   = ${xrdb:color9}
+xcolor10  = ${xrdb:color10}
+xcolor11  = ${xrdb:color11}
+xcolor12  = ${xrdb:color12}
+xcolor13  = ${xrdb:color13}
+xcolor14  = ${xrdb:color14}
+xcolor15  = ${xrdb:color15}
 background = ${xrdb:background}
 foreground = ${xrdb:foreground}
 
@@ -40,39 +34,38 @@ foreground = ${xrdb:foreground}
 ;---------------------------------------------------------
 
 [global/wm]
-margin-top = 21
+margin-top    = 24
 margin-bottom = 21
 
 [bar/bar]
 monitor-fallback = ${env:MONITOR:eDP-1}
-;dpi = ${xrdb:Xft.dpi:136}
-bottom = false
-width = 100%
-height = 21
-offset-x = 0%
-offset-y = 0%
-fixed-center = true
-background = ${colors.xcolor0}
-foreground = ${colors.xcolor1}
+bottom           = false
+width            = 100%
+height           = 24
+offset-x          = 0%
+offset-y          = 0%
+fixed-center      = true
+background       = ${colors.xcolor0}
+foreground       = ${colors.xcolor1}
 
-overline-size = 0
-overline-color = ${colors.xcolor7}
-underline-size = 0
-underline-color = ${colors.xcolor7}
-;label-name-overline = ${colors.colorname}
+overline-size           = 0
+overline-color          = ${colors.xcolor7}
+underline-size          = 0
+underline-color         = ${colors.xcolor7}
+;label-name-overline    = ${colors.colorname}
 ;format-param-underline = ${colors.colorname}
 
-border-bottom-size = 0
-border-bottom-color = ${colors.xcolor7}
-border-top-size = 0
-border-top-color = ${colors.xcolor7}
+border-bottom-size      = 0
+border-bottom-color     = ${colors.xcolor7}
+border-top-size         = 0
+border-top-color        = ${colors.xcolor7}
 border-color-foreground = ${colors.peach}
 
-spacing = 0
-padding-left = 0
-padding-right = 0
-;label-padding = 2
-module-margin-left = 0
+spacing             = 0
+padding-left        = 0
+padding-right       = 0
+;label-padding       = 2
+module-margin-left  = 0
 module-margin-right = 0
 
 
@@ -80,12 +73,12 @@ module-margin-right = 0
 ;			F O N T S
 ;---------------------------------------------------------
 
-font-0 = PowerlineSymbols:size=15;3
+font-0 = PowerlineSymbols:size=14;4
 font-1 = Terminus:size=10;3
-font-2 = FontAwesome:size=12;3
+font-2 = FontAwesome:size=11;3
 font-3 = Terminus:size=12;0
 font-4 = Monospace:size=11;3
-font-5 = FontAwesome:size=26;7
+font-5 = FontAwesome:size=24;7
 ; Extra symbols: http://fontawesome.io/cheatsheet/
 
 
@@ -93,13 +86,13 @@ font-5 = FontAwesome:size=26;7
 ;			  T R A Y
 ;---------------------------------------------------------
 
-tray-position = left
-tray-padding = 0
+tray-position    = left
+tray-padding     = 4
 tray-transparent = false
-tray-maxsize=24
+tray-maxsize     = 22
 ;tray-offset-x = 21%
-tray-foreground = ${colors.xcolor7}
-tray-background = ${colors.xcolor1}
+tray-foreground  = ${colors.xcolor7}
+tray-background  = ${colors.xcolor1}
 
 ;wm-restack = i3
 ;override-redirect = true
@@ -109,21 +102,15 @@ tray-background = ${colors.xcolor1}
 ;  	    M O D U L E    L A Y O U T S
 ;---------------------------------------------------------
 
-modules-left = i3 RightArrow3 weather RightArrow2 RightArrow1
+modules-left   = i3 RightArrow3 RightArrow2 RightArrow1
 modules-center = date
-modules-right = arrow1 LeftStripe arrow1 volume arrow2 network ssh vpn arrow3 cpu arrow2 memory arrow3 filesystem arrow2 battery powermenu
+modules-right  = arrow1 LeftStripe arrow1 volume arrow2 network arrow3 battery powermenu
 
 ; All modules available in this config file:
-; bspwm text xwindow tray xkeyboard filesystem mpd backlight cpu 
-; memory network eth date volume battery temperature github 
-; appmenu powermenu mail weather music ssh vpn
+; i3 text xwindow tray xkeyboard filesystem mpd backlight cpu 
+; memory network date volume battery temperature github 
+; appmenu powermenu
 
-;[bar/secondary]
-;inherit        = bar/bar
-;bottom         = true
-;modules-left   = i3
-;modules-center = time
-;modules-right  =arrow1 arrow2 weather arrow3 network arrow2 powermenu
 
 
 ;---------------------------------------------------------
@@ -169,9 +156,9 @@ enable-click = true
 ;label-unfocused-font = 3
 
 ; ws-icon-[0-9]+ = label;icon
-;                   
+;                    
 ; Note that the label needs to correspond with the i3 workspace name
-ws-icon-0 = 1; 
+ws-icon-0 = 1; 
 ws-icon-1 = 2; 
 ws-icon-2 = 3; 
 ws-icon-3 = 4; 
@@ -179,8 +166,8 @@ ws-icon-4 = 5; 
 ws-icon-default = 
 
 ; Available tags:
-;   <label-state> (default) - gets replaced with <label-(focused|unfocused|visible|urgent)>
-;   <label-mode> (default)
+;  <label-state> (default) - gets replaced with <label-(focused|unfocused|visible|urgent)>
+;  <label-mode> (default)
 format = <label-state> <label-mode>
 
 ; Available tokens: %mode%
@@ -219,68 +206,68 @@ label-urgent-font = 3
 ;---------------------------------------------------------
 
 [module/pipe]
-type = custom/text
-content = "|"
+type               = custom/text
+content            = "|"
 content-foreground = ${colors.darkgrey}
 content-background = ${colors.xcolor0}
 content-padding = 1
 
 [module/LeftStripe]
-type = custom/text
-content = ""
+type               = custom/text
+content            = ""
 content-foreground = ${colors.xcolor0}
 content-background = ${colors.xcolor1}
 
 [module/arrow1]
-type = custom/text
-content = ""
+type               = custom/text
+content            = ""
 content-foreground = ${colors.xcolor1}
 content-background = ${colors.xcolor0}
 
 [module/arrow2]
-type = custom/text
-content = " "
+type               = custom/text
+content            = ""
 content-foreground = ${colors.xcolor7}
 content-background = ${colors.xcolor1}
 
 [module/arrow3]
-type = custom/text
-content = " "
+type               = custom/text
+content            = ""
 content-foreground = ${colors.xcolor1}
 content-background = ${colors.xcolor7}
 
 [module/RightStripe]
-type = custom/text
-content = ""
+type               = custom/text
+content            = ""
 content-foreground = ${colors.xcolor0}
 content-background = ${colors.xcolor1}
 
 [module/RightArrow1]
-type = custom/text
-content = ""
+type               = custom/text
+content            = ""
 content-foreground = ${colors.xcolor1}
 content-background = ${colors.xcolor0}
 
 [module/RightArrow2]
-type = custom/text
+type               = custom/text
 content            = ""
 content-foreground = ${colors.xcolor7}
 content-background = ${colors.xcolor1}
 
 [module/RightArrow3]
-type = custom/text
-content = ""
+type               = custom/text
+content            = ""
 content-foreground = ${colors.xcolor1}
 content-background = ${colors.xcolor7}
 
 [module/MiddleArrowLeft]
-type = custom/text
-content = "◥"
+type               = custom/text
+content            = "◥"
 content-foreground = ${colors.xcolor1}
 content-background = ${colors.xcolor0}
 ;◥ ◤◢ ◣
 [module/MiddleArrowRight]
-type = custom/text
+type               = custom/text
 content            = "◢"
 content-foreground = ${colors.xcolor0}
 content-background = ${colors.xcolor1}
@@ -568,18 +555,18 @@ adapter = AC0
 full-at = 99
 
 format-charging = <animation-charging> <label-charging>
-format-charging-foreground = ${colors.xcolor1}
-format-charging-background = ${colors.xcolor7}
+format-charging-foreground = ${colors.xcolor4}
+format-charging-background = ${colors.xcolor1}
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-foreground = ${colors.xcolor1}
-format-discharging-background = ${colors.xcolor7}
+format-discharging-foreground = ${colors.xcolor7}
+format-discharging-background = ${colors.xcolor1}
 format-full = <label-full>
-format-full-foreground = ${colors.xcolor1}
-format-full-background = ${colors.xcolor7}
+format-full-foreground = ${colors.xcolor7}
+format-full-background = ${colors.xcolor1}
 
 label-charging = " %percentage%% "
 label-discharging = "%percentage%% "
-label-discharging-foreground = ${colors.xcolor1}
+label-discharging-foreground = ${colors.xcolor7}
 label-full = "  %percentage%% "
 ; 
 ramp-capacity-0 = " "
@@ -673,15 +660,15 @@ menu-0-0-exec       = menu-open-1
 menu-0-0-foreground = ${colors.xcolor7}
 menu-0-0-background = ${colors.xcolor0}
 
-menu-1-0            = "    "
-menu-1-0-exec       = bash ~/lock.sh
-menu-1-0-foreground = ${colors.xcolor7}
-menu-1-0-background = ${colors.xcolor0}
+;menu-1-0            = "    "
+;menu-1-0-exec       = bash ~/lock.sh
+;menu-1-0-foreground = ${colors.xcolor7}
+;menu-1-0-background = ${colors.xcolor0}
 
-menu-1-1            = "    "
-menu-1-1-exec       = menu-open-0
-menu-1-1-foreground = ${colors.xcolor7}
-menu-1-1-background = ${colors.xcolor0}
+;menu-1-1            = "    "
+;menu-1-1-exec       = menu-open-0
+;menu-1-1-foreground = ${colors.xcolor7}
+;menu-1-1-background = ${colors.xcolor0}
 
 
 ; sleep
@@ -741,7 +728,7 @@ menu-4-1-background = ${colors.xcolor0}
 ; shutdown
 
 menu-0-4            = "  "
-menu-0-4-exec       = menu-open-2
+menu-0-4-exec       = menu-open-5
 menu-0-4-foreground = ${colors.xcolor7}
 menu-0-4-background = ${colors.xcolor0}
 
