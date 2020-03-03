@@ -9,22 +9,22 @@
 
 [colors]
 
-xcolor0   = ${xrdb:color0}
-xcolor1   = ${xrdb:color1}
-xcolor2   = ${xrdb:color2}
-xcolor3   = ${xrdb:color3}
-xcolor4   = ${xrdb:color4}
-xcolor5   = ${xrdb:color5}
-xcolor6   = ${xrdb:color6}
-xcolor7   = ${xrdb:color7}
-xcolor8   = ${xrdb:color8}
-xcolor9   = ${xrdb:color9}
-xcolor10  = ${xrdb:color10}
-xcolor11  = ${xrdb:color11}
-xcolor12  = ${xrdb:color12}
-xcolor13  = ${xrdb:color13}
-xcolor14  = ${xrdb:color14}
-xcolor15  = ${xrdb:color15}
+xcolor0    = ${xrdb:color0}
+xcolor1    = ${xrdb:color1}
+xcolor2    = ${xrdb:color2}
+xcolor3    = ${xrdb:color3}
+xcolor4    = ${xrdb:color4}
+xcolor5    = ${xrdb:color5}
+xcolor6    = ${xrdb:color6}
+xcolor7    = ${xrdb:color7}
+xcolor8    = ${xrdb:color8}
+xcolor9    = ${xrdb:color9}
+xcolor10   = ${xrdb:color10}
+xcolor11   = ${xrdb:color11}
+xcolor12   = ${xrdb:color12}
+xcolor13   = ${xrdb:color13}
+xcolor14   = ${xrdb:color14}
+xcolor15   = ${xrdb:color15}
 background = ${xrdb:background}
 foreground = ${xrdb:foreground}
 
@@ -34,28 +34,28 @@ foreground = ${xrdb:foreground}
 ;---------------------------------------------------------
 
 [global/wm]
-margin-top    = 24
-margin-bottom = 21
+margin-top    = 10
+margin-bottom = 0
 
 [bar/bar]
 monitor-fallback = ${env:MONITOR:eDP-1}
-bottom           = false
-width            = 100%
-height           = 24
-offset-x          = 0%
-offset-y          = 0%
-fixed-center      = true
+bottom           = true
+width            = 100%;98%
+height           = 26
+offset-x         = 1%
+offset-y         = 2%:-3
+fixed-center     = true
 background       = ${colors.xcolor0}
 foreground       = ${colors.xcolor1}
 
-overline-size           = 0
+overline-size           = 2
 overline-color          = ${colors.xcolor7}
 underline-size          = 0
 underline-color         = ${colors.xcolor7}
 ;label-name-overline    = ${colors.colorname}
 ;format-param-underline = ${colors.colorname}
 
-border-bottom-size      = 0
+border-bottom-size      = 2
 border-bottom-color     = ${colors.xcolor7}
 border-top-size         = 0
 border-top-color        = ${colors.xcolor7}
@@ -65,16 +65,16 @@ spacing             = 0
 padding-left        = 0
 padding-right       = 0
 ;label-padding       = 2
-module-margin-left  = 0
-module-margin-right = 0
+module-margin-left  = 2
+module-margin-right = 2
 
 
 ;---------------------------------------------------------
 ;			F O N T S
 ;---------------------------------------------------------
 
-font-0 = PowerlineSymbols:size=14;4
-font-1 = Terminus:size=10;3
+font-0 = "Ubuntu Condensed:size=12;2"
+font-1 = "icomoon\-feather:size=10;2"
 font-2 = FontAwesome:size=11;3
 font-3 = Terminus:size=12;0
 font-4 = Monospace:size=11;3
@@ -86,14 +86,14 @@ font-5 = FontAwesome:size=24;7
 ;			  T R A Y
 ;---------------------------------------------------------
 
-tray-position    = left
-tray-padding     = 4
-tray-transparent = false
-tray-maxsize     = 22
-;tray-offset-x = 21%
-tray-foreground  = ${colors.xcolor7}
-tray-background  = ${colors.xcolor1}
+;tray-position    = 
+tray-padding     = 0
+tray-transparent = true
+tray-maxsize     = 20
+tray-foreground  = ${colors.xcolor0}
+tray-background  = ${colors.xcolor7}
 
+;tray-offset-x = 21%
 ;wm-restack = i3
 ;override-redirect = true
 
@@ -102,9 +102,9 @@ tray-background  = ${colors.xcolor1}
 ;  	    M O D U L E    L A Y O U T S
 ;---------------------------------------------------------
 
-modules-left   = i3 RightArrow3 RightArrow2 RightArrow1
+modules-left   = i3
 modules-center = date
-modules-right  = arrow1 LeftStripe arrow1 volume arrow2 network arrow3 battery powermenu
+modules-right  = volume network battery powermenu
 
 ; All modules available in this config file:
 ; i3 text xwindow tray xkeyboard filesystem mpd backlight cpu 
@@ -202,78 +202,6 @@ label-urgent-padding = 2
 label-urgent-font = 3
 
 ;---------------------------------------------------------
-;	          T E X T    M O D U L E S
-;---------------------------------------------------------
-
-[module/pipe]
-type               = custom/text
-content            = "|"
-content-foreground = ${colors.darkgrey}
-content-background = ${colors.xcolor0}
-content-padding = 1
-
-[module/LeftStripe]
-type               = custom/text
-content            = ""
-content-foreground = ${colors.xcolor0}
-content-background = ${colors.xcolor1}
-
-[module/arrow1]
-type               = custom/text
-content            = ""
-content-foreground = ${colors.xcolor1}
-content-background = ${colors.xcolor0}
-
-[module/arrow2]
-type               = custom/text
-content            = ""
-content-foreground = ${colors.xcolor7}
-content-background = ${colors.xcolor1}
-
-[module/arrow3]
-type               = custom/text
-content            = ""
-content-foreground = ${colors.xcolor1}
-content-background = ${colors.xcolor7}
-
-[module/RightStripe]
-type               = custom/text
-content            = ""
-content-foreground = ${colors.xcolor0}
-content-background = ${colors.xcolor1}
-
-[module/RightArrow1]
-type               = custom/text
-content            = ""
-content-foreground = ${colors.xcolor1}
-content-background = ${colors.xcolor0}
-
-[module/RightArrow2]
-type               = custom/text
-content            = ""
-content-foreground = ${colors.xcolor7}
-content-background = ${colors.xcolor1}
-
-[module/RightArrow3]
-type               = custom/text
-content            = ""
-content-foreground = ${colors.xcolor1}
-content-background = ${colors.xcolor7}
-
-[module/MiddleArrowLeft]
-type               = custom/text
-content            = "◥"
-content-foreground = ${colors.xcolor1}
-content-background = ${colors.xcolor0}
-;◥ ◤◢ ◣
-[module/MiddleArrowRight]
-type               = custom/text
-content            = "◢"
-content-foreground = ${colors.xcolor0}
-content-background = ${colors.xcolor1}
-
-
-;---------------------------------------------------------
 ;		       X W I N D O W
 ;---------------------------------------------------------
 
@@ -343,16 +271,6 @@ format-online = <label-song>  <icon-prev> <icon-seekb> <icon-stop> <toggle> <ico
 label-song-maxlen = 25
 label-song-ellipsis = true
 
-icon-prev = 
-icon-seekb = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-icon-seekf = 
-
-icon-random = 
-icon-repeat = 
 
 toggle-on-foreground = ${colors.primary}
 toggle-off-foreground = #66
@@ -437,11 +355,11 @@ format-disconnected = <label-disconnected>
 
 label-connected = "  %downspeed%"
 ;label-connected = "  %essid%  %local_ip%  %downspeed:8%  %upspeed:8%"
-label-connected-foreground = ${colors.xcolor1}
-label-connected-background = ${colors.xcolor7}
+label-connected-foreground = ${colors.xcolor7}
+label-connected-background = ${colors.xcolor0}
 label-disconnected = " "
-label-disconnected-foreground = ${colors.xcolor1}
-label-disconnected-background = ${colors.xcolor7}
+label-disconnected-foreground = ${colors.xcolor7}
+label-disconnected-background = ${colors.xcolor0}
 
 ramp-signal-0 = ▁
 ramp-signal-1 = ▂
@@ -498,35 +416,35 @@ label = "  %date%%time%  "
 ;---------------------------------------------------------
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 
-master-soundcard = default
-speaker-soundcard = default
+master-soundcard    = default
+speaker-soundcard   = default
 headphone-soundcard = default
-mapping = true
+mapping             = true
 
 format-volume = <ramp-volume><label-volume>
 ;     
 
 label-volume = %percentage%
 label-volume-foreground = ${colors.xcolor7}
-label-volume-background = ${colors.xcolor1}
-label-muted = "  muted"
-label-muted-foreground = ${colors.xcolor4}
-label-muted-background = ${colors.xcolor1}
+label-volume-background = ${colors.xcolor0}
+label-muted = "  "
+label-muted-foreground = ${colors.xcolor7}
+label-muted-background = ${colors.xcolor0}
 
 ramp-volume-0 = "  "
-ramp-volume-0-foreground = ${colors.xcolor7}
-ramp-volume-0-background = ${colors.xcolor1}
+ramp-volume-0-foreground = ${colors.xcolor0}
+ramp-volume-0-background = ${colors.xcolor7}
 ramp-volume-1 = "  "
-ramp-volume-1-foreground = ${colors.xcolor7}
-ramp-volume-1-background = ${colors.xcolor1}
+ramp-volume-1-foreground = ${colors.xcolor0}
+ramp-volume-1-background = ${colors.xcolor7}
 ramp-volume-2 = "  "
-ramp-volume-2-foreground = ${colors.xcolor7}
-ramp-volume-2-background = ${colors.xcolor1}
+ramp-volume-2-foreground = ${colors.xcolor0}
+ramp-volume-2-background = ${colors.xcolor7}
 ramp-volume-3 = "  "
-ramp-volume-3-foreground = ${colors.xcolor7}
-ramp-volume-3-background = ${colors.xcolor1}
+ramp-volume-3-foreground = ${colors.xcolor0}
+ramp-volume-3-background = ${colors.xcolor7}
 
 bar-volume-width = 10
 bar-volume-background = #495858
@@ -555,14 +473,14 @@ adapter = AC0
 full-at = 99
 
 format-charging = <animation-charging> <label-charging>
-format-charging-foreground = ${colors.xcolor4}
-format-charging-background = ${colors.xcolor1}
+format-charging-foreground = ${colors.xcolor7}
+format-charging-background = ${colors.xcolor0}
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-foreground = ${colors.xcolor7}
-format-discharging-background = ${colors.xcolor1}
+format-discharging-background = ${colors.xcolor0}
 format-full = <label-full>
 format-full-foreground = ${colors.xcolor7}
-format-full-background = ${colors.xcolor1}
+format-full-background = ${colors.xcolor0}
 
 label-charging = " %percentage%% "
 label-discharging = "%percentage%% "
@@ -645,108 +563,108 @@ type = custom/menu
 ;      » 
 label-open = " "
 label-open-font = 6
-label-open-foreground = ${colors.xcolor1}
+label-open-foreground = ${colors.xcolor2}
 label-open-background = ${colors.xcolor0}
 label-close = 
-label-close-foreground = ${colors.xcolor7}
-label-close-background = ${colors.xcolor0}
+label-close-foreground = ${colors.xcolor2}
+label-close-background = ${colors.xcolor3}
 label-separator = " "
 label-separator-foreground = ${colors.xcolor1}
-label-separator-background = ${colors.xcolor0}
+label-separator-background = ${colors.xcolor4}
 
 ; lock
 menu-0-0            = "  "
 menu-0-0-exec       = menu-open-1
-menu-0-0-foreground = ${colors.xcolor7}
-menu-0-0-background = ${colors.xcolor0}
+menu-0-0-foreground = ${colors.xcolor0}
+menu-0-0-background = ${colors.xcolor4}
 
 ;menu-1-0            = "    "
 ;menu-1-0-exec       = bash ~/lock.sh
-;menu-1-0-foreground = ${colors.xcolor7}
-;menu-1-0-background = ${colors.xcolor0}
+;menu-1-0-foreground = ${colors.xcolor0}
+;menu-1-0-background = ${colors.xcolor4}
 
 ;menu-1-1            = "    "
 ;menu-1-1-exec       = menu-open-0
-;menu-1-1-foreground = ${colors.xcolor7}
-;menu-1-1-background = ${colors.xcolor0}
+;menu-1-1-foreground = ${colors.xcolor0}
+;menu-1-1-background = ${colors.xcolor4}
 
 
 ; sleep
 
 menu-0-1            = "  "
 menu-0-1-exec       = menu-open-2
-menu-0-1-foreground = ${colors.xcolor7}
-menu-0-1-background = ${colors.xcolor0}
+menu-0-1-foreground = ${colors.xcolor0}
+menu-0-1-background = ${colors.xcolor4}
 
 menu-2-0            = "    "
-menu-2-0-exec       = bash ~/lock.sh && systemctl suspend
-menu-2-0-foreground = ${colors.xcolor7}
-menu-2-0-background = ${colors.xcolor0}
+menu-2-0-exec       = systemctl suspend
+menu-2-0-foreground = ${colors.xcolor0}
+menu-2-0-background = ${colors.xcolor4}
 
 menu-2-1            = "    "
 menu-2-1-exec       = menu-open-0
-menu-2-1-foreground = ${colors.xcolor7}
-menu-2-1-background = ${colors.xcolor0}
+menu-2-1-foreground = ${colors.xcolor0}
+menu-2-1-background = ${colors.xcolor4}
 
 
 ; logout
 
 menu-0-2            = "  "
 menu-0-2-exec       = menu-open-3
-menu-0-2-foreground = ${colors.xcolor7}
-menu-0-2-background = ${colors.xcolor0}
+menu-0-2-foreground = ${colors.xcolor0}
+menu-0-2-background = ${colors.xcolor4}
 
 menu-3-0            = "    "
 menu-3-0-exec       = pkill x
-menu-3-0-foreground = ${colors.xcolor7}
-menu-3-0-background = ${colors.xcolor0}
+menu-3-0-foreground = ${colors.xcolor0}
+menu-3-0-background = ${colors.xcolor4}
 
 menu-3-1            = "    "
 menu-3-1-exec       = menu-open-0
-menu-3-1-foreground = ${colors.xcolor7}
-menu-3-1-background = ${colors.xcolor0}
+menu-3-1-foreground = ${colors.xcolor0}
+menu-3-1-background = ${colors.xcolor4}
 
 
 ; reboot
 
 menu-0-3            = "   "
 menu-0-3-exec       = menu-open-4
-menu-0-3-foreground = ${colors.xcolor7}
-menu-0-3-background = ${colors.xcolor0}
+menu-0-3-foreground = ${colors.xcolor0}
+menu-0-3-background = ${colors.xcolor4}
 
 menu-4-0            = "     "
 menu-4-0-exec       = systemctl reboot
-menu-4-0-foreground = ${colors.xcolor7}
-menu-4-0-background = ${colors.xcolor0}
+menu-4-0-foreground = ${colors.xcolor0}
+menu-4-0-background = ${colors.xcolor4}
 
 menu-4-1            = "    "
 menu-4-1-exec       = menu-open-0
-menu-4-1-foreground = ${colors.xcolor7}
-menu-4-1-background = ${colors.xcolor0}
+menu-4-1-foreground = ${colors.xcolor0}
+menu-4-1-background = ${colors.xcolor4}
 
 
 ; shutdown
 
 menu-0-4            = "  "
 menu-0-4-exec       = menu-open-5
-menu-0-4-foreground = ${colors.xcolor7}
-menu-0-4-background = ${colors.xcolor0}
+menu-0-4-foreground = ${colors.xcolor0}
+menu-0-4-background = ${colors.xcolor4}
 
 menu-5-0            = "    "
 menu-5-0-exec       = systemctl poweroff
-menu-5-0-foreground = ${colors.xcolor7}
-menu-5-0-background = ${colors.xcolor0}
+menu-5-0-foreground = ${colors.xcolor0}
+menu-5-0-background = ${colors.xcolor4}
 
 menu-5-1            = "    "
 menu-5-1-exec       = menu-open-0
-menu-5-1-foreground = ${colors.xcolor7}
-menu-5-1-background = ${colors.xcolor0}
+menu-5-1-foreground = ${colors.xcolor0}
+menu-5-1-background = ${colors.xcolor4}
 
 
 ; end stripe
 menu-0-5 = " "
 menu-0-5-font = 6
-menu-0-5-foreground = ${colors.xcolor1}
+menu-0-5-foreground = ${colors.xcolor4}
 menu-0-5-background = ${colors.xcolor0}
 
 
