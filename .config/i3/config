@@ -15,7 +15,8 @@ smart_borders on
 #Binds
 bindsym $mod+Shift+b exec firefox
 bindsym $mod+Shift+n exec nautilus
-bindsym $mod+Shift+s exec sublime
+bindsym $mod+Shift+s exec subl3
+bindsym $mod+Shift+m exec "rofi -show run"
 bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 
